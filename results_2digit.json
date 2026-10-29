@@ -1,0 +1,20 @@
+{
+  "steps": 900,
+  "problems": 200,
+  "k": 8,
+  "greedy_accuracy": 0.495,
+  "self_consistency_accuracy": 0.495,
+  "verified_retry_coverage": 0.51,
+  "mean_attempts_to_solve": 4.955,
+  "attempts_histogram": {
+    "1": 100,
+    "2": 0,
+    "3": 1,
+    "4": 0,
+    "5": 0,
+    "6": 1,
+    "7": 0,
+    "8": 0,
+    "9": 98
+  }
+}

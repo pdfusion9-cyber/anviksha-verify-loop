@@ -1,0 +1,14 @@
+{
+  "memory_budget_mb": 100,
+  "parameter_fit": {"fp32": 25000000, "fp16": 50000000, "int8": 100000000,
+                    "int4": 200000000, "int2": 400000000, "int1": 800000000},
+  "verdict": "1B parameters do not fit in 100 MB at any precision; 200M at int4 does",
+  "training_cost": {"1B_params_1T_tokens_flops": 6.0e21, "1T_params_1T_tokens_flops": 6.0e24},
+  "loop_experiment": {
+    "model": "tiny char transformer, dim 128, 2 layers, 4 heads",
+    "problems": 200, "k": 8, "temperature": 1.0,
+    "one_digit": {"greedy": 1.0, "self_consistency": 1.0, "verified_retry": 1.0, "mean_attempts": 1.0},
+    "two_digit": {"greedy": 0.495, "self_consistency": 0.495, "verified_retry": 0.51, "mean_attempts": 4.96}
+  },
+  "conclusion": "retry only helps with sample diversity and a real oracle; it cannot substitute for competence"
+}
